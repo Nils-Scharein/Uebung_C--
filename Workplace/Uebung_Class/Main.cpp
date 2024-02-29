@@ -1,17 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-
-class Player
-{
-    private:
-        int number = 10;
-
-    public:
-        std::string name;
-        int age;
-
-};
+#include "Player.h"
 
 int main()
 {
@@ -21,7 +11,12 @@ frank.age = 25;
 
 Player Nils;
 Nils.name = "Test";
-Nils.number = 20;
+
+Player *enemy = new Player;
+(*enemy).name = "Enemy";
+(*enemy).change_number();
+(*enemy).change();
+
 
 return 0;
 }
