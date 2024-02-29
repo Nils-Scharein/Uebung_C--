@@ -1,7 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "Player.h"
+#include "C:\Users\Nils\Desktop\git\Uebung_C--\Workplace\Uebung_Class\Player Class\Player.cpp"
+#include "C:\Users\Nils\Desktop\git\Uebung_C--\Workplace\Uebung_Class\Account\Account.cpp"
 
 int main()
 {
@@ -16,7 +17,18 @@ Player *enemy = new Player;
 (*enemy).name = "Enemy";
 (*enemy).change_number();
 (*enemy).change();
+(*enemy).set_balance(55.33);
+
+Account test;
+test.set_name("Frank");
+test.deposit(600.542);
+std::cout << test.get_balance() << std::endl;
+test.withdraw(200.20);
+std::cout << test.get_balance() << std::endl;
+test.withdraw(800);
+
 
 
 return 0;
+
 }
