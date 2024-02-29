@@ -19,15 +19,15 @@ Player *enemy = new Player;
 (*enemy).change();
 (*enemy).set_balance(55.33);
 
-Account test;
-test.set_name("Frank");
-test.deposit(600.542);
-std::cout << test.get_balance() << std::endl;
-test.withdraw(200.20);
-std::cout << test.get_balance() << std::endl;
-test.withdraw(800);
+Account *test = new Account;
+test -> set_name("Frank");
+test -> deposit(600.542);
+std::cout << test -> get_balance() << std::endl;
+test -> withdraw(200.20);
+std::cout << test -> get_balance() << std::endl;
+test -> withdraw(800);
 
-
+delete test;
 
 return 0;
 

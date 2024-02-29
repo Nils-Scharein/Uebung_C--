@@ -1,4 +1,8 @@
 #include <string>
+
+#ifndef PLAYER_H
+#define PLAYER_H
+
 #pragma once
 
 class Player
@@ -21,3 +25,5 @@ class Player
     protected:
         int test = 0;
 };
+
+#endif
