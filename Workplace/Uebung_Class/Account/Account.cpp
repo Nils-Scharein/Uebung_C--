@@ -2,6 +2,8 @@
 #include <string>
 #include <iostream>
 
+int Account::num_Accounts = 0;
+
 bool Account::set_name(std::string set_name)
 {
     name = set_name;
@@ -27,4 +29,9 @@ bool Account::withdraw(double amount)
         std::cout << "Withdraw not Succesful" << std::endl;
         return false;
     }
+}
+
+int Account::get_num_Accounts()
+{
+    return num_Accounts;
 }

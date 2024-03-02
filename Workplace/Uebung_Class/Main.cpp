@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "C:\Users\Nils\Desktop\git\Uebung_C--\Workplace\Uebung_Class\Player Class\Player.cpp"
-#include "C:\Users\Nils\Desktop\git\Uebung_C--\Workplace\Uebung_Class\Account\Account.cpp"
+#include "..\Uebung_Class\Account\Account.cpp"
+#include "..\Uebung_Class\Player Class\Player.cpp"
 
 int main()
 {
@@ -26,6 +26,11 @@ std::cout << test -> get_balance() << std::endl;
 test -> withdraw(200.20);
 std::cout << test -> get_balance() << std::endl;
 test -> withdraw(800);
+
+Account maier;
+Account felix;
+
+std::cout << Account::get_num_Accounts() << std::endl;
 
 delete test;
 
