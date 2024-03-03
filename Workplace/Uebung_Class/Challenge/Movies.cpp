@@ -32,7 +32,17 @@ Movies::~Movies() {
     *********************************************************************/
 bool Movies::add_movie(std::string name, std::string rating, int watched) {
     // you implement this method
-    return false;
+    for (int j = 0; j < movies.size(); j++)
+    {
+        if(movies[j].get_name() == name)
+        {
+            return false;
+        }
+    }
+
+    Movie temp {name, rating, watched};
+    movies.push_back(temp);
+    return true;
 }
 
  /*************************************************************************
@@ -48,6 +58,14 @@ bool Movies::add_movie(std::string name, std::string rating, int watched) {
     *********************************************************************/
 bool Movies::increment_watched(std::string name) {
    // you implement this method
+    for (Movie &movie: movies)
+    {
+        if (movie.get_name() == name)
+        {
+            movie.increment_watched();
+            return true;
+        }
+    }
    return false;
 }
 
@@ -59,5 +77,14 @@ bool Movies::increment_watched(std::string name) {
     object displays itself
     *********************************************************************/
 void Movies::display() const {
-   // You implement this method
+    if(movies.size() == 0) {
+        std::cout << "Sorry no movies to display\n" << std::endl;
+    }
+    else {
+    std::cout << "==========================================" << std::endl;
+        for (const auto movie: movies)
+            movie.display();
+    std::cout << "==========================================" << std::endl;
+    }
+
 }

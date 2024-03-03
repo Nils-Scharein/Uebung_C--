@@ -125,7 +125,7 @@ int main() {
     
     my_movies.display();    // Big and Ice Age watched count incremented by 1
     
-    increment_watched(my_movies,"XXX");         // XXX not found
+    increment_watched(my_movies,"XXX");         // xxx not found
 
 	return 0;
 }
@@ -164,4 +164,4 @@ Cinderella, PG, 7
 Ice Age, PG, 13
 ===================================
 
-XXX not found
+xxx not found
